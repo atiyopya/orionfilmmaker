@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrionFillmMaker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <nav class="navbar glass-nav">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="Orion Film Maker Logo" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#portfolio">Portfolyo</a>
+                <a href="#contact">İletişim</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav glass-panel">
+        <button class="close-menu-btn">
+            <i data-lucide="x"></i>
+        </button>
+        <div class="mobile-links">
+            <a href="#home">Ana Sayfa</a>
+            <a href="#portfolio">Portfolyo</a>
+            <a href="#contact">İletişim</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="hero-section container">
+            <div class="hero-content fade-in-up">
+                <div class="badge">Yaratıcı & Profesyonel</div>
+                <h1 class="hero-title">Vizyonu Gerçeğe<br><span class="text-gradient">Dönüştürüyoruz</span></h1>
+                <p class="hero-subtitle">Modern tasarımlar, etkileyici videolar ve unutulmaz kullanıcı deneyimleri inşa ediyorum. Çalışmalarıma aşağıdan göz atabilirsiniz.</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">Projeleri İncele <i data-lucide="arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                </div>
+            </div>
+            <div class="hero-image-container fade-in-up delay-1">
+                <div class="glass-card hero-glass-display">
+                    <img src="innovative_productions_hero.png" alt="Innovative Productions" class="hero-bg-img">
+                    <div class="glass-content">
+                        <h3>Yenilikçi Prodüksiyonlar</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section container">
+            <div class="section-header fade-in-up">
+                <h2>Seçkin <span class="text-gradient">Çalışmalarım</span></h2>
+                <p>En iyi projelerimi keşfedin. Videolar Google Drive üzerinden yüksek kalitede izlenebilir.</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="1.png?v=1" alt="Keops Mimarlık Ofisi" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Mimari Tanıtım</span>
+                        <h3>Keops Mimarlık Ofisi</h3>
+                        <p>Mimari vizyonun, iç tasarımın ve estetiğin ön plana çıkarıldığı şık bir ofis tanıtım prodüksiyonu.</p>
+                        <a href="https://drive.google.com/file/d/1LorwMnot-6FoImbYPCyjHG5DvN5JibgV/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card glass-card fade-in-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="2.png?v=1" alt="Process Showroom" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Showroom Tanıtımı</span>
+                        <h3>Process Showroom</h3>
+                        <p>Kusursuz detayların ve modern çizgilerin vurgulandığı etkileyici bir mekan tanıtımı.</p>
+                        <a href="https://drive.google.com/file/d/1SvnrwDywjnkD97qQdHxZMCEN1ttZuOID/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-card fade-in-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="3.png?v=1" alt="Inspıre 3 Showreel" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Showreel</span>
+                        <h3>Inspıre 3 Showreel</h3>
+                        <p>En heyecan verici ve dinamik çekimlerin harmanlandığı özel yapım yetenek özeti.</p>
+                        <a href="https://drive.google.com/file/d/1d_hHNuVNHJkaaijG68GMWJv4caeFeaIx/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="4.png?v=1" alt="Kum Proje Beton Dökme" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Endüstriyel Çekim</span>
+                        <h3>Kum Proje Beton Dökme</h3>
+                        <p>Beton döküm aşamalarının profesyonel açılardan güçlü ve estetik bir şekilde kaydedildiği saha çalışması.</p>
+                        <a href="https://drive.google.com/file/d/11q-cCrNs9TToiZgw4UszFnUDOEv6a-He/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-card glass-card fade-in-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="5.png?v=1" alt="Inojen Enerji" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Kurumsal Tanıtım</span>
+                        <h3>Inojen Enerji</h3>
+                        <p>Enerji sektöründe yenilikçi vizyonu yansıtan güçlü ve dinamik kurumsal tanıtım filmi.</p>
+                        <a href="https://drive.google.com/file/d/1q0lO1s_Ds5i7yy3Zx67JUPbHZ4mUQfF9/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-card glass-card fade-in-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="6.png?v=1" alt="h-concept Kobisan Evleri" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Mimari & Yaşam</span>
+                        <h3>h-concept Kobisan Evleri</h3>
+                        <p>Modern yaşam alanlarının detaylarını ve huzurlu atmosferini yansıtan konut konsept tanıtımı.</p>
+                        <a href="https://drive.google.com/file/d/1jeoVIrSOLyLNXAjkmkNroofYM5EcipIg/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="7.png?v=1" alt="Process Alüminyum" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Endüstriyel & Kurumsal</span>
+                        <h3>Process Alüminyum</h3>
+                        <p>Alüminyum üretim tesisinin güçlü yapısını ve modern süreçlerini anlatan etkileyici endüstriyel film.</p>
+                        <a href="https://drive.google.com/file/d/1gGcJF1JSlu69xLDBdHX1A-i5QEx3X-cU/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-card glass-card fade-in-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="8.png?v=1" alt="Whıte Koala" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Marka Tanıtımı</span>
+                        <h3>Whıte Koala</h3>
+                        <p>Genç ve dinamik bir markanın enerjisini yansıtan, modern ve ilgi çekici tanıtım filmi.</p>
+                        <a href="https://drive.google.com/file/d/1LMV_kzkT3PPS5QRGAAoPjqR3E6MnyHUi/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-card glass-card fade-in-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="9.png?v=1" alt="New Karaman Spor Salonu" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Spor & Motivasyon</span>
+                        <h3>New Karaman Spor Salonu</h3>
+                        <p>Spor salonunun yüksek enerjisini ve sağlam ekipmanlarını sergileyen motivasyon dolu tanıtım.</p>
+                        <a href="https://drive.google.com/file/d/1jkKU_FNftlkSDUNlMHapFiYjKc9jh5zV/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="10.png?v=1" alt="Inspıre 3 Tanıtım" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Marka Tanıtımı</span>
+                        <h3>Inspıre 3 Tanıtım</h3>
+                        <p>İlham veren serinin dikkat çekici özelliklerini ve yaratıcı vizyonunu aktaran profesyonel tanıtım.</p>
+                        <a href="https://drive.google.com/file/d/1bnIXgi96SMDiTNFwU7oGW3tRBIlpYhxo/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="portfolio-card glass-card fade-in-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="11.png?v=1" alt="29 Ekim İbrahim Yapıcı İlkokulu" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Özel Gün & Etkinlik</span>
+                        <h3>29 Ekim İbrahim Yapıcı İlkokulu</h3>
+                        <p>29 Ekim Cumhuriyet Bayramı heyecanını ve okuldaki coşkulu kutlamaları gururla yansıtan etkinlik çekimi.</p>
+                        <a href="https://drive.google.com/file/d/1na5j6nj1KAwlAKRmFmUXUdxjJtJvX7_O/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="portfolio-card glass-card fade-in-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="12.png?v=1" alt="ANAOKULU" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Kurumsal & Eğitim</span>
+                        <h3>ANAOKULU</h3>
+                        <p>Eğitim kurumunun sıcak atmosferini, öğrencilerin neşesini ve güvenli ortamını yansıtan özel okul tanıtımı.</p>
+                        <a href="https://drive.google.com/file/d/1EDYO4KV4k7rJyrqUUAY1nn-uiuktd28j/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="13.png?v=1" alt="ASELSAN KORKUT" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Savunma Sanayi</span>
+                        <h3>ASELSAN KORKUT</h3>
+                        <p>Türkiye'nin gururu Aselsan Korkut hava savunma sisteminin gücünü ve teknolojisini sergileyen epik prodüksiyon.</p>
+                        <a href="https://drive.google.com/file/d/13MB5WcubdaQEH_VWYZSPh4v6qSkofm8Y/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="portfolio-card glass-card fade-in-up delay-1">
+                    <div class="card-image-wrapper">
+                        <img src="14.png?v=1" alt="BEYŞEHİR MİLLİ PARKI" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Doğa & Belgesel</span>
+                        <h3>BEYŞEHİR MİLLİ PARKI</h3>
+                        <p>Beyşehir Milli Parkı'nın eşsiz doğasını, yaban hayatını ve huzur dolu manzarasını anlatan sinematik doğa çekimi.</p>
+                        <a href="https://drive.google.com/file/d/18aBYx2BP4A22AOpHUORQgy8k7JTTA3Q3/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="portfolio-card glass-card fade-in-up delay-2">
+                    <div class="card-image-wrapper">
+                        <img src="15.png?v=1" alt="DRİFT" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Otomotiv & Aksiyon</span>
+                        <h3>DRİFT</h3>
+                        <p>Otomobil tutkusunu, yüksek adrenalini ve drift aksiyonunu her açısıyla izleyiciye yaşatan dinamik video klipleri.</p>
+                        <a href="https://drive.google.com/file/d/1bKXBgyQ0LwGsLx9HY3OVWZ7YP-grZBPZ/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="portfolio-card glass-card fade-in-up">
+                    <div class="card-image-wrapper">
+                        <img src="16.png?v=1" alt="KV KIRTASİYE" class="custom-thumbnail">
+                        <button class="btn-play" aria-label="Videoyu İzle">
+                            <i data-lucide="play"></i>
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <span class="category">Marka & Reklam</span>
+                        <h3>KV KIRTASİYE</h3>
+                        <p>Markanın renkli ürün yelpazesini, samimi hizmet anlayışını ve dinamik vizyonunu yansıtan ticari çekim.</p>
+                        <a href="https://drive.google.com/file/d/1qM0S30c0AKuIE689iz6KTb_XT864fhlX/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="external-link"></i> Drive'da İzle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <div class="glass-panel contact-panel fade-in-up">
+                <div class="contact-info">
+                    <h2>Birlikte <span class="text-gradient">Çalışalım</span></h2>
+                    <p>Yeni bir projeniz mi var veya sadece merhaba demek mi istiyorsunuz? Benimle iletişime geçin.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="icon-box"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4>E-Posta</h4>
+                                <span>ismaildincelmurat@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <span>5438759050</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4>Konum</h4>
+                                <span>Konya, Türkiye</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">İsim Soyisim</label>
+                        <input type="text" id="name" placeholder="Adınız Soyadınız" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Posta Adresi</label>
+                        <input type="email" id="email" placeholder="ornek@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" rows="4" placeholder="Projenizden bahsedin..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Mesaj Gönder <i data-lucide="send"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="logo_gold.png" alt="Orion Film Maker Logo" class="logo-img-footer">
+            </div>
+            <div class="footer-social">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 OrionFillmMaker. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <div class="video-modal" id="videoModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-panel">
+            <div class="modal-header">
+                <button class="modal-close" id="closeModal">
+                    <i data-lucide="x"></i>
+                </button>
+                <a class="modal-drive-link" id="modalDriveLink" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="external-link"></i> Drive'da Aç
+                </a>
+            </div>
+            <div class="video-wrapper">
+                <div class="video-loading" id="videoLoading">
+                    <div class="spinner"></div>
+                    <p>Video yükleniyor...</p>
+                </div>
+                <iframe src="" id="videoFrame" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
