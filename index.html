@@ -1,447 +1,300 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrionFillmMaker</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" type="image/png" href="favicon.png">
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Orion Film Maker | Sinematik Portfolyo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon.png">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#544600",
+              "surface-container-low": "#1b1b1b",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed": "#ffe16d",
+              "error-container": "#93000a",
+              "secondary-container": "#ffdb3c",
+              "surface-container": "#1f1f1f",
+              "surface-bright": "#393939",
+              "on-tertiary-container": "#513b00",
+              "on-primary-fixed": "#2f1500",
+              "on-secondary-fixed": "#221b00",
+              "primary-fixed-dim": "#ffb77d",
+              "on-tertiary-fixed": "#261a00",
+              "tertiary-container": "#d8a100",
+              "on-primary": "#4d2600",
+              "outline-variant": "#564334",
+              "primary-container": "#ff8c00",
+              "background": "#131313",
+              "on-secondary": "#3a3000",
+              "tertiary-fixed": "#ffdfa0",
+              "tertiary-fixed-dim": "#fbbc00",
+              "surface-variant": "#353535",
+              "surface-tint": "#ffb77d",
+              "on-secondary-container": "#725f00",
+              "surface-dim": "#131313",
+              "on-tertiary": "#402d00",
+              "inverse-on-surface": "#303030",
+              "secondary-fixed-dim": "#e9c400",
+              "tertiary": "#fbbc00",
+              "on-background": "#e2e2e2",
+              "surface-container-high": "#2a2a2a",
+              "outline": "#a48c7a",
+              "on-surface-variant": "#ddc1ae",
+              "on-primary-fixed-variant": "#6e3900",
+              "surface": "#131313",
+              "on-surface": "#e2e2e2",
+              "inverse-primary": "#904d00",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "secondary": "#fff9ef",
+              "on-primary-container": "#623200",
+              "on-error-container": "#ffdad6",
+              "on-error": "#690005",
+              "primary": "#ffb77d",
+              "inverse-surface": "#e2e2e2",
+              "surface-container-highest": "#353535",
+              "error": "#ffb4ab",
+              "primary-fixed": "#ffdcc3"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(27, 27, 27, 0.4);
+        backdrop-filter: blur(12px);
+      }
+      .cinematic-shadow {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      }
+      .perspective-grid {
+        perspective: 1000px;
+      }
+    </style>
 </head>
-<body>
-    <div class="background-globes">
-        <div class="globe globe-1"></div>
-        <div class="globe globe-2"></div>
-    </div>
-
-    <nav class="navbar glass-nav">
-        <div class="container nav-container">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Orion Film Maker Logo" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="#home">Ana Sayfa</a>
-                <a href="#portfolio">Portfolyo</a>
-                <a href="#contact">İletişim</a>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-xl no-border tonal-shift-bg">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#ffb77d] uppercase">
+                Orion Film Maker
             </div>
-            <button class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Manrope'] font-bold tracking-tight uppercase text-sm text-[#ffb77d] border-b-2 border-[#ffb77d] pb-1" href="#">Portfolyo</a>
+<a class="font-['Manrope'] font-bold tracking-tight uppercase text-sm text-[#e2e2e2]/60 hover:text-[#e2e2e2] transition-colors" href="#">Hakkımızda</a>
+<a class="font-['Manrope'] font-bold tracking-tight uppercase text-sm text-[#e2e2e2]/60 hover:text-[#e2e2e2] transition-colors" href="#">Hizmetler</a>
+<a class="font-['Manrope'] font-bold tracking-tight uppercase text-sm text-[#e2e2e2]/60 hover:text-[#e2e2e2] transition-colors" href="#">İletişim</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#e2e2e2]/60 hover:text-[#ffb77d] transition-all duration-300 scale-95 active:duration-100 p-2 rounded-full hover:bg-white/5">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<div class="h-10 w-10 overflow-hidden border border-outline-variant/30">
+<img alt="Yönetmen Profili" class="w-full h-full object-cover" data-alt="professional portrait of a film director with creative lighting and cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxcpdqklf-cRhMNQhE_PJL8fBgsPtjHkjxRVTXfw6uJBtXwEolLXBdUHZMay75fQGjKAkx8hUKc7gVZRaGspDJMq0mlalux_-l3ScprO9tY-9JDEUydZCrC4rJUtwJQTc_uK_6EPrMQsSzW6I_YmoBhn9RliW-edcK56q3Ic4qAUNfonM3LiiHSMyPuFqKUxRukqmR97Cr9m4jndX_A29IZpcpeyhv3vja6GpP-O_RqggEx8IKjCSt9UvdQHDjl5Lg7tLDlwdsphMT"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-20 px-4 md:px-8 max-w-[1920px] mx-auto">
+<!-- Hero Context -->
+<header class="mb-20 max-w-4xl">
+<div class="flex items-center gap-3 mb-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label text-xs tracking-[0.3em] uppercase text-tertiary">SEÇİLEN ÇALIŞMALAR 2024</span>
+</div>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-none">
+                DİJİTAL <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">YÖNETMEN KURGUSU.</span>
+</h1>
+<p class="font-body text-on-surface/60 text-lg md:text-xl max-w-2xl leading-relaxed">
+                Ticari ve sinematik hikaye anlatıcılığının geleceğini hassas teknik uygulama ve yüksek kontrastlı duygusal anlatılarla çerçevelemek.
+            </p>
+</header>
+<!-- Portfolio Grid (4x4) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 perspective-grid">
+<!-- Project 1: Modern Architecture -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="sleek modern glass skyscraper architectural detail during sunset with deep orange reflections and sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUM95eRFOyvBCVT6sda4C8bdfcBXrh85VgLS1p0v8zPjr18jDwZUhGjUWGW2O3p72mdSM1qR0vTQ6HwSYPnkzxjLtmsZ6-b9iVKB8TXw4zRUUEIojBShbWfEugiDUYHUGEyGeWJTe9o4dsLh6n6VaC0UT9XwHAl6EnnWJ5ySPVT1fmk2hHPSi0el2iJvifmqz5neneHVgEm2b3PsDZKXVaCfW0IRyslRD3R7rpNqFYKbW-_N8DaJHWn7ZBVqf65uaUpI4YuWfxTqJl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">MİMARİ</p>
+<h3 class="font-headline text-lg font-bold">YAPISAL AKIŞ</h3>
+</div>
+</div>
+<!-- Project 2: Luxury Showroom -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="minimalist luxury interior showroom with soft ambient lighting, high-end furniture, and polished concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAyxWtUg_S4SVO3N76GBuXexWW-VbC0tGsAJMrO99oWDT8jf4GGVPc8hq2Y4VDZ2Y8f0H_xB9uuLknDNjjrk9oEz5uU_KqEAOwpHZZttOIg66190sdoM5YqSun5Kk34_GZ4QG-QTjuNhmdd6JlrpAHkvVAu-H4-N752d5UkpwtsQXMKAK065uQP0QVhZ04PEHoCETMCv1D4ulBuE0Wh-l0lkbg5hgEV-THo9AEtN2XMGWt7gS2nJE0qCQuCI5yTD8UyGOlqmpsAcOz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">TİCARİ</p>
+<h3 class="font-headline text-lg font-bold">ATÖLYE IŞIĞI</h3>
+</div>
+</div>
+<!-- Project 3: Showreel Montage -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="dynamic film montage frame featuring various cinematic scenes with dramatic lighting and professional color grading" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACOkZnOkhXvactICTgmPQY_mBE0AvY3ApUtOpPFcarniFX7UNt6oerfB_DLgpwE-s7r_29dO3sc3jq5c1RrbKYxckuVToRkNfSeTUYVNPWhMm09qP_p05l0JJ9YVNv90OHvh1rJQy3k8vxP9P893ZA07yVL7OuXyFNVWcWShUW-hYA3LPkrGNJNytrjDSFoceectEiQqc45po-bnXy837lOFqEEEF4D4_SM2DWvRoeD0q3GM9kJXBFzIyB5FK7Vt_xNvRALYBsoHC_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SHOWREEL</p>
+<h3 class="font-headline text-lg font-bold">ORION 2024</h3>
+</div>
+</div>
+<!-- Project 4: Industrial Concrete -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="brutalist industrial concrete structure with stark lighting and deep shadows creating high visual tension" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY3CjeTeS-V9IMpSWrz8ZBtjkmIy6GPOT4lUdTCgnoclA5tjBnhUN9Rgtg9WKcKiiP8mnT0gzHRnkgos8gtvqQJs_NB-0pzVVEg9bu_9tKPQoFpssqm-k6uwDAWu3eIfvPo0v6RNCXaemgoPX25SZC_l7b6DHsbQCdm-NGYDApv-8NjwV4K28a1ebZwbMub_PiUocFs-Jgjy6tMCi9uYLH7KNaRnHnykzPA6Jq4Mownh9gVLMdhv1harz68BfogQ0XUcSxSn2lVAN2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">BELGESEL</p>
+<h3 class="font-headline text-lg font-bold">HAM DOKU</h3>
+</div>
+</div>
+<!-- Project 5: Solar Energy -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="aerial drone shot of a vast solar farm during golden hour with long shadows and brilliant orange sun rays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDue7p05HMqgzWBeSBTPO5RKbLFj0XDl1KVybPjPIznYZy3kfX5doJaLaMNH5DKLBNEsZbYsSdPiCjs27RpeZds_DCj27defqrq2KDg66EXpPT2NwIIMA6MIcMXiU_0dowmG188Nj0QxNXFoJMrzTnLg_oYAXxFnvCfq1RrGmDknQ0K6paclYNiBhL9V-LOW-kYLEBsjHlodVK8kWsw7yTZPvNurAJV5K1IoMUGnRHffxYa5yi7HGngYdQHUfdPAYYZk2mAvclHc2Gu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SÜRDÜRÜLEBİLİRLİK</p>
+<h3 class="font-headline text-lg font-bold">HELİOS SAHASI</h3>
+</div>
+</div>
+<!-- Project 6: Residential Housing -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="ultra-modern luxury residential villa in a lush landscape with warm interior lighting glowing through floor-to-ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg408iEonkMCOVLB0NSeCOjG-Y1DwFbYnguKiOrwpvks-SLc3bu-rbbnhKx4ke2I2HNFrSNyaqWS_1kOUgahkL0ayei2CAiak6WQwF6b_NqI9NAj4qIgFZh8z4d6YWYTqwxyQksxa63ZlvuY4ElPDIWtvPhx6pfZAiL7U6pG02rjMALHDmFsF63NNGIdUmkOYZrQ2Ei48MB21T9-V8R9hwZU_qhhgbIPGob79lqVSCTyGvQXQrAXSiORVfMDMEDx4cgrwR2xoZ1q8y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">GAYRİMENKUL</p>
+<h3 class="font-headline text-lg font-bold">MODERN VESTA</h3>
+</div>
+</div>
+<!-- Project 7: Aluminum Factory -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="industrial aluminum smelting factory with sparks flying, metallic reflections and high-energy cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYyQ6eEL3qBb3BFA-PX7bAZ_6moKLJQzyQcuQckMOZ0lH2OANer7uOssTDNU6_3nF2_lQ3QwznjYZOReX6yupNKbT1GzVOgWX6xGaqC6lJNmTl7mGgW6PXT88LX4I3TfGCr1mJcWZsvcN6we_WXfHjgcTYLhvsll0ib2UkaAJr5jsGjiToa1AicIFGWt-9y1XEerf_2qQ27M0PPHPYOFqCtyUDAd54Pwg62ligNsEG71_P5rEuhCcY4vaPqF16dqOnULzmDDbGj0Hr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">ENDÜSTRİYEL</p>
+<h3 class="font-headline text-lg font-bold">ÖRS VE ALEV</h3>
+</div>
+</div>
+<!-- Project 8: Brand Promotion -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="high-end cinematic lifestyle shot for brand promotion featuring a luxury product in a soft focus artistic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-nYoSAnhZu2Dr2ONRHZPb5ZmvtlYq0411Pxsm9C5fMsZQvbpCVbEPOK1ouFzuyC9JVk1UtbsxRlGzra2zKFt_5u9ZV9mm3nzTT13KDqAHvu_fxJPwuR9M98gHUC5JfO2T7RZxz5U20RlOeP09SqZSHGrkwCd8MLnWvTQbnHFHJPf4JpOFZlePM6LjblSGqeBtjxvNdZgZjAGroqMa0_zPHHcKULZn3IHQrOv6-9tk6gQP3TvW7vCgmNSe_-gXU06GKL4EwdYUpufn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">MARKALAMA</p>
+<h3 class="font-headline text-lg font-bold">RUHANİ AKIŞ</h3>
+</div>
+</div>
+<!-- Project 9: Modern Gym -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="gritty high-contrast gym interior with focused athlete and cinematic sweat glistening under dramatic top-down lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUdiQqgygNhyBp1dShzgitFE8P_xPZT0KCH48pbipdmdmZsDwW4zkTYWtimPP5RJfRK6u-48UKTHtDbyfUEEWxzVQYa8BBfN1OzC1hhT1ZaG6icnI6fGEZyAf_Efi1cn-BIqa5Y7F20EfLfa1r7ex8cKspITcUnPPvUjbw0538y4MzWwbxRDtaNKTNyXCpH3z10S-Z_W0wMwMrjJahaa42pnlmETWnBO-KfZh5wZQt-0HwvIs6RJZ7yzh2-3wtD-eLJD7JH4qbQhx0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SPOR</p>
+<h3 class="font-headline text-lg font-bold">ÜSTÜN PERFORMANS</h3>
+</div>
+</div>
+<!-- Project 10: Tech Product -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="macro close-up of advanced technology circuit boards with glowing amber lights and futuristic digital atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtpDrjR4D8HyESRPfc1km9KJLUdDgDdLSw9p5U6Gqc3byQJpS2NcoICCEjEy45ffGx-sYCSGaN1Ce0y3z-bDR94zpYBPFl8iYxp9BWoGvRwi8nEHr9dcIxWV_A9NsAcWgmYi_WSEQAgPXnIpARKffcPhn_4M6RhWRMprPMLOqyNjtGmFvVjRh2rEFkm3mpPBWvF2P_QhSjRwcdno5aOTQcYVUUkYClFvIWF2pKueUXKLNgHAcgN6IS1cjxGrEqvNsayM3eD8Yf3eYt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">TEKNOLOJİ</p>
+<h3 class="font-headline text-lg font-bold">ÇEKİRDEK NABIZ</h3>
+</div>
+</div>
+<!-- Project 11: School Celebration -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="vibrant school graduation celebration with golden confetti falling and emotional students in graduation gowns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4vozJSCstFINRq0b1MRNsskU9GEra9rABYOOPTddt6RX1saMPXMg-JDRyggG6ORkVVIPVjzIumcRdCkW5RDMwYdhL_UpGc7Bs1WPl8VeUNGDz9ItCAzkHpL7vKjrNgvTFsB4YwhDfObhWa7Pwqtz4sxF7Xsy8hyvgCHFcygkQiCmaYV2DNsyaN1OuWkiDC5i6nL0AFxl-fj-15wvWh-GVsEkS8LaGQoYSIVr80HA1zotHk8KJQuralIwpoCAm0Z7o599N6mguYqQt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">EĞİTİM</p>
+<h3 class="font-headline text-lg font-bold">GELECEĞİ İNŞA EDENLER</h3>
+</div>
+</div>
+<!-- Project 12: Kindergarten -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="warm sun-drenched kindergarten classroom with colorful educational tools and a sense of wonder and safety" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV8aEbhvFqFOQqFCPCUP0sUYxlpSz5tVyO0anYse1CE3A2U4gBTFZr14DN8BY00v3lpOOHh5xBRDMsjTQHG5-P5P4scVmTBksy8j0XIyS6GhMXnMEGG53vfgy3bFnlz-Qs-jxGEkqrX9OfYTgo3T9nrPoXtBPVU3otGC6UmQvkstsTdPY3v09cIATFzFE8hbLy576WSxjPZYE5bA2hSaVNZFJeSxgENu5DAFcIrVgG9nYMPYepgXVNu1MKW2o6TdCJwCk0qLFfISA7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SOSYAL</p>
+<h3 class="font-headline text-lg font-bold">İLK ADIMLAR</h3>
+</div>
+</div>
+<!-- Project 13: Military Defense -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="heavy military equipment in a desert landscape during twilight with technical lighting and a powerful presence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcYYDl9zHcnJGxlLn98rpCYMzQV2Ihic0_tg4Bkb4sjoYAMNLOSKvVPaX3jeTwrWrVzqWasWM2vqE14LHxJGY88-sfXmTaMLsKKt5V11yTMXyCNNOrLH-JGfRWUbyinOGM1MDV0mcuViSBYipR86i7dMy7n1KSsznepfD3UI_wkqo_by6oxSPO1nEc6D3TX5MZ3RidFumDbd-yYpKtXH13VkBm7IZPv91pmzlI6p5FvNMuLKalaS8Jg68-S1nTEFrUMkdQlFzsBkZY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SAVUNMA</p>
+<h3 class="font-headline text-lg font-bold">DEMİR NÖBET</h3>
+</div>
+</div>
+<!-- Project 14: Aerial Drone Shot -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="epic high-altitude drone shot of a winding mountain road through dense fog with cinematic blue and amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVsZpakCCi1LJWcwOaQ2S24SNX91t2UTVAeuszYeliscWKtTCpISXi4ddL0yoQOMI2K_yYVk6P3g5kTIFIskHyADF8CggLlcJhHIb3-B5nJg2FBhAk8pW8bWiFBcxF5huG7jqIHvLg0rOGMnD_oiHYaOjANftyzDTbEidSx5ZH8ahrx143_KuhYHy_6rtjjM6QOd4_oyCNZohBEtSIbyqItKQRu0DDVLcYp2ckUVW47pxx_zQuBky-FvX-B6LWbuehJXT8J4zpAfx7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">SEYAHAT</p>
+<h3 class="font-headline text-lg font-bold">SIFIR RAKIM</h3>
+</div>
+</div>
+<!-- Project 15: Sports Car Drifting -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="sleek sports car drifting on a wet asphalt track with tire smoke illuminated by neon lights and glowing brake discs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATzCeJBm0U58jbc7YUZGCnQ55L5gZ4cHWyVKNE8xEBFlfoI00jPY17dIp8xOIGgxPYDogazobcehMWR_QDIhCi93w1OpWxtQJnEnxJiwd5I7T0T8vRi5JNv-XY3LjrRGJBSdM1M75ixg4iUp_Synj_0LPFksP2096KLH9vfc8EySq6bB2jptCoztsQ1US1BnDGHPs7FDYKTphdYI5AnMq8UVp8r_hd7ZCF4R4TBvv80ujXQ6t198cvtgBits_f4sjy1eD4NLVBm8Y-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">OTOMOTİV</p>
+<h3 class="font-headline text-lg font-bold">HIZ DEĞİŞİMİ</h3>
+</div>
+</div>
+<!-- Project 16: Stationery Store -->
+<div class="group relative aspect-video bg-surface-container-low overflow-hidden cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-105">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="artistic interior of a boutique stationery store with organized premium paper goods and soft warm directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZvw69Rtbpxar2p0Dj7H3kkimXqlFm3lzmZ8kei_RzkueQVg__lmmCq-YiFgxorRGLKwMPCEXS6_zyUrVMlikABYLzegtw0LuuJrZlb77fFM2aFF_3BhaPxtyq798F6hAd2_uGg7Lvrupc4pS24xurqoZFrbj0gUayhctQNwKNEsO9SSM14t9H0zQ8buhBVTDxo0rnmDked5xEfKI8T03C3KiILEe_iV2KafruVfsgsmo1a2FK3nd2olYsIngYFkf9d3M1SzNQmFK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label text-[10px] tracking-widest text-primary uppercase mb-1">PERAKENDE</p>
+<h3 class="font-headline text-lg font-bold">ZANAAT KUTUSU</h3>
+</div>
+</div>
+</section>
+<!-- CTAs / Interaction -->
+<div class="mt-32 text-center">
+<button class="bg-gradient-to-r from-primary-container to-tertiary px-10 py-5 text-on-primary-container font-headline font-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,140,0,0.3)]">
+                PRODÜKSİYONU BAŞLAT
             </button>
-        </div>
-    </nav>
-
-    <div class="mobile-nav glass-panel">
-        <button class="close-menu-btn">
-            <i data-lucide="x"></i>
-        </button>
-        <div class="mobile-links">
-            <a href="#home">Ana Sayfa</a>
-            <a href="#portfolio">Portfolyo</a>
-            <a href="#contact">İletişim</a>
-        </div>
-    </div>
-
-    <main>
-        <section id="home" class="hero-section container">
-            <div class="hero-content fade-in-up">
-                <div class="badge">Yaratıcı & Profesyonel</div>
-                <h1 class="hero-title">Vizyonu Gerçeğe<br><span class="text-gradient">Dönüştürüyoruz</span></h1>
-                <p class="hero-subtitle">Modern tasarımlar, etkileyici videolar ve unutulmaz kullanıcı deneyimleri inşa ediyorum. Çalışmalarıma aşağıdan göz atabilirsiniz.</p>
-                <div class="hero-cta">
-                    <a href="#portfolio" class="btn btn-primary">Projeleri İncele <i data-lucide="arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
-                </div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 px-8 mt-20 tonal-shift-above-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1920px] mx-auto gap-4">
+<div class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#e2e2e2]/40">
+                © 2024 Orion Film Maker. TÜM HAKLARI SAKLIDIR.
             </div>
-            <div class="hero-image-container fade-in-up delay-1">
-                <div class="glass-card hero-glass-display">
-                    <img src="innovative_productions_hero.png" alt="Innovative Productions" class="hero-bg-img">
-                    <div class="glass-content">
-                        <h3>Yenilikçi Prodüksiyonlar</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio-section container">
-            <div class="section-header fade-in-up">
-                <h2>Seçkin <span class="text-gradient">Çalışmalarım</span></h2>
-                <p>En iyi projelerimi keşfedin. Videolar Google Drive üzerinden yüksek kalitede izlenebilir.</p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="1.png?v=1" alt="Keops Mimarlık Ofisi" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Mimari Tanıtım</span>
-                        <h3>Keops Mimarlık Ofisi</h3>
-                        <p>Mimari vizyonun, iç tasarımın ve estetiğin ön plana çıkarıldığı şık bir ofis tanıtım prodüksiyonu.</p>
-                        <a href="https://drive.google.com/file/d/1LorwMnot-6FoImbYPCyjHG5DvN5JibgV/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-card glass-card fade-in-up delay-1">
-                    <div class="card-image-wrapper">
-                        <img src="2.png?v=1" alt="Process Showroom" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Showroom Tanıtımı</span>
-                        <h3>Process Showroom</h3>
-                        <p>Kusursuz detayların ve modern çizgilerin vurgulandığı etkileyici bir mekan tanıtımı.</p>
-                        <a href="https://drive.google.com/file/d/1SvnrwDywjnkD97qQdHxZMCEN1ttZuOID/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card glass-card fade-in-up delay-2">
-                    <div class="card-image-wrapper">
-                        <img src="3.png?v=1" alt="Inspıre 3 Showreel" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Showreel</span>
-                        <h3>Inspıre 3 Showreel</h3>
-                        <p>En heyecan verici ve dinamik çekimlerin harmanlandığı özel yapım yetenek özeti.</p>
-                        <a href="https://drive.google.com/file/d/1d_hHNuVNHJkaaijG68GMWJv4caeFeaIx/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="4.png?v=1" alt="Kum Proje Beton Dökme" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Endüstriyel Çekim</span>
-                        <h3>Kum Proje Beton Dökme</h3>
-                        <p>Beton döküm aşamalarının profesyonel açılardan güçlü ve estetik bir şekilde kaydedildiği saha çalışması.</p>
-                        <a href="https://drive.google.com/file/d/11q-cCrNs9TToiZgw4UszFnUDOEv6a-He/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="portfolio-card glass-card fade-in-up delay-1">
-                    <div class="card-image-wrapper">
-                        <img src="5.png?v=1" alt="Inojen Enerji" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Kurumsal Tanıtım</span>
-                        <h3>Inojen Enerji</h3>
-                        <p>Enerji sektöründe yenilikçi vizyonu yansıtan güçlü ve dinamik kurumsal tanıtım filmi.</p>
-                        <a href="https://drive.google.com/file/d/1q0lO1s_Ds5i7yy3Zx67JUPbHZ4mUQfF9/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="portfolio-card glass-card fade-in-up delay-2">
-                    <div class="card-image-wrapper">
-                        <img src="6.png?v=1" alt="h-concept Kobisan Evleri" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Mimari & Yaşam</span>
-                        <h3>h-concept Kobisan Evleri</h3>
-                        <p>Modern yaşam alanlarının detaylarını ve huzurlu atmosferini yansıtan konut konsept tanıtımı.</p>
-                        <a href="https://drive.google.com/file/d/1jeoVIrSOLyLNXAjkmkNroofYM5EcipIg/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="7.png?v=1" alt="Process Alüminyum" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Endüstriyel & Kurumsal</span>
-                        <h3>Process Alüminyum</h3>
-                        <p>Alüminyum üretim tesisinin güçlü yapısını ve modern süreçlerini anlatan etkileyici endüstriyel film.</p>
-                        <a href="https://drive.google.com/file/d/1gGcJF1JSlu69xLDBdHX1A-i5QEx3X-cU/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="portfolio-card glass-card fade-in-up delay-1">
-                    <div class="card-image-wrapper">
-                        <img src="8.png?v=1" alt="Whıte Koala" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Marka Tanıtımı</span>
-                        <h3>Whıte Koala</h3>
-                        <p>Genç ve dinamik bir markanın enerjisini yansıtan, modern ve ilgi çekici tanıtım filmi.</p>
-                        <a href="https://drive.google.com/file/d/1LMV_kzkT3PPS5QRGAAoPjqR3E6MnyHUi/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 9 -->
-                <div class="portfolio-card glass-card fade-in-up delay-2">
-                    <div class="card-image-wrapper">
-                        <img src="9.png?v=1" alt="New Karaman Spor Salonu" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Spor & Motivasyon</span>
-                        <h3>New Karaman Spor Salonu</h3>
-                        <p>Spor salonunun yüksek enerjisini ve sağlam ekipmanlarını sergileyen motivasyon dolu tanıtım.</p>
-                        <a href="https://drive.google.com/file/d/1jkKU_FNftlkSDUNlMHapFiYjKc9jh5zV/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 10 -->
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="10.png?v=1" alt="Inspıre 3 Tanıtım" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Marka Tanıtımı</span>
-                        <h3>Inspıre 3 Tanıtım</h3>
-                        <p>İlham veren serinin dikkat çekici özelliklerini ve yaratıcı vizyonunu aktaran profesyonel tanıtım.</p>
-                        <a href="https://drive.google.com/file/d/1bnIXgi96SMDiTNFwU7oGW3tRBIlpYhxo/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 11 -->
-                <div class="portfolio-card glass-card fade-in-up delay-1">
-                    <div class="card-image-wrapper">
-                        <img src="11.png?v=1" alt="29 Ekim İbrahim Yapıcı İlkokulu" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Özel Gün & Etkinlik</span>
-                        <h3>29 Ekim İbrahim Yapıcı İlkokulu</h3>
-                        <p>29 Ekim Cumhuriyet Bayramı heyecanını ve okuldaki coşkulu kutlamaları gururla yansıtan etkinlik çekimi.</p>
-                        <a href="https://drive.google.com/file/d/1na5j6nj1KAwlAKRmFmUXUdxjJtJvX7_O/view?usp=drive_link" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 12 -->
-                <div class="portfolio-card glass-card fade-in-up delay-2">
-                    <div class="card-image-wrapper">
-                        <img src="12.png?v=1" alt="ANAOKULU" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Kurumsal & Eğitim</span>
-                        <h3>ANAOKULU</h3>
-                        <p>Eğitim kurumunun sıcak atmosferini, öğrencilerin neşesini ve güvenli ortamını yansıtan özel okul tanıtımı.</p>
-                        <a href="https://drive.google.com/file/d/1EDYO4KV4k7rJyrqUUAY1nn-uiuktd28j/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 13 -->
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="13.png?v=1" alt="ASELSAN KORKUT" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Savunma Sanayi</span>
-                        <h3>ASELSAN KORKUT</h3>
-                        <p>Türkiye'nin gururu Aselsan Korkut hava savunma sisteminin gücünü ve teknolojisini sergileyen epik prodüksiyon.</p>
-                        <a href="https://drive.google.com/file/d/13MB5WcubdaQEH_VWYZSPh4v6qSkofm8Y/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 14 -->
-                <div class="portfolio-card glass-card fade-in-up delay-1">
-                    <div class="card-image-wrapper">
-                        <img src="14.png?v=1" alt="BEYŞEHİR MİLLİ PARKI" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Doğa & Belgesel</span>
-                        <h3>BEYŞEHİR MİLLİ PARKI</h3>
-                        <p>Beyşehir Milli Parkı'nın eşsiz doğasını, yaban hayatını ve huzur dolu manzarasını anlatan sinematik doğa çekimi.</p>
-                        <a href="https://drive.google.com/file/d/18aBYx2BP4A22AOpHUORQgy8k7JTTA3Q3/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 15 -->
-                <div class="portfolio-card glass-card fade-in-up delay-2">
-                    <div class="card-image-wrapper">
-                        <img src="15.png?v=1" alt="DRİFT" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Otomotiv & Aksiyon</span>
-                        <h3>DRİFT</h3>
-                        <p>Otomobil tutkusunu, yüksek adrenalini ve drift aksiyonunu her açısıyla izleyiciye yaşatan dinamik video klipleri.</p>
-                        <a href="https://drive.google.com/file/d/1bKXBgyQ0LwGsLx9HY3OVWZ7YP-grZBPZ/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 16 -->
-                <div class="portfolio-card glass-card fade-in-up">
-                    <div class="card-image-wrapper">
-                        <img src="16.png?v=1" alt="KV KIRTASİYE" class="custom-thumbnail">
-                        <button class="btn-play" aria-label="Videoyu İzle">
-                            <i data-lucide="play"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Marka & Reklam</span>
-                        <h3>KV KIRTASİYE</h3>
-                        <p>Markanın renkli ürün yelpazesini, samimi hizmet anlayışını ve dinamik vizyonunu yansıtan ticari çekim.</p>
-                        <a href="https://drive.google.com/file/d/1qM0S30c0AKuIE689iz6KTb_XT864fhlX/view?usp=sharing" class="drive-link" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="external-link"></i> Drive'da İzle
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section container">
-            <div class="glass-panel contact-panel fade-in-up">
-                <div class="contact-info">
-                    <h2>Birlikte <span class="text-gradient">Çalışalım</span></h2>
-                    <p>Yeni bir projeniz mi var veya sadece merhaba demek mi istiyorsunuz? Benimle iletişime geçin.</p>
-                    
-                    <div class="info-items">
-                        <div class="info-item">
-                            <div class="icon-box"><i data-lucide="mail"></i></div>
-                            <div>
-                                <h4>E-Posta</h4>
-                                <span>ismaildincelmurat@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="icon-box"><i data-lucide="phone"></i></div>
-                            <div>
-                                <h4>Telefon</h4>
-                                <span>5438759050</span>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="icon-box"><i data-lucide="map-pin"></i></div>
-                            <div>
-                                <h4>Konum</h4>
-                                <span>Konya, Türkiye</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">İsim Soyisim</label>
-                        <input type="text" id="name" placeholder="Adınız Soyadınız" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Posta Adresi</label>
-                        <input type="email" id="email" placeholder="ornek@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mesajınız</label>
-                        <textarea id="message" rows="4" placeholder="Projenizden bahsedin..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Mesaj Gönder <i data-lucide="send"></i></button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <img src="logo_gold.png" alt="Orion Film Maker Logo" class="logo-img-footer">
-            </div>
-            <div class="footer-social">
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
-                <a href="#"><i data-lucide="twitter"></i></a>
-            </div>
-            <p class="copyright">&copy; 2026 OrionFillmMaker. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
-
-    <div class="video-modal" id="videoModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container glass-panel">
-            <div class="modal-header">
-                <button class="modal-close" id="closeModal">
-                    <i data-lucide="x"></i>
-                </button>
-                <a class="modal-drive-link" id="modalDriveLink" target="_blank" rel="noopener noreferrer">
-                    <i data-lucide="external-link"></i> Drive'da Aç
-                </a>
-            </div>
-            <div class="video-wrapper">
-                <div class="video-loading" id="videoLoading">
-                    <div class="spinner"></div>
-                    <p>Video yükleniyor...</p>
-                </div>
-                <iframe src="" id="videoFrame" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#e2e2e2]/40 hover:text-[#ffb77d] transition-colors duration-500 opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#e2e2e2]/40 hover:text-[#ffb77d] transition-colors duration-500 opacity-80 hover:opacity-100" href="#">Vimeo</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#e2e2e2]/40 hover:text-[#ffb77d] transition-colors duration-500 opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-[#e2e2e2]/40 hover:text-[#ffb77d] transition-colors duration-500 opacity-80 hover:opacity-100" href="#">E-POSTA</a>
+</div>
+</div>
+</footer>
+<!-- Decorative Lens Flare -->
+<div class="fixed top-0 right-0 w-[50vw] h-[512px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-0 left-0 w-[40vw] h-[409px] bg-tertiary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+</body></html>
